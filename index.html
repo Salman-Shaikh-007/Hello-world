@@ -116,7 +116,6 @@ cursor:pointer;
 
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-
 </head>
 
 <body>
@@ -160,10 +159,10 @@ cursor:pointer;
 <div class="section">
 <h2>📸 Our Gallery</h2>
 <div class="gallery">
-<a href="photo1.jpg" class="glightbox"><img src="photo1.jpg"></a>
-<a href="photo2.jpg" class="glightbox"><img src="photo2.jpg"></a>
-<a href="photo3.jpg" class="glightbox"><img src="photo3.jpg"></a>
-<a href="photo4.jpg" class="glightbox"><img src="photo4.jpg"></a>
+<a href="photo1.jpg" class="glightbox" data-gallery="g"><img src="photo1.jpg"></a>
+<a href="photo2.jpg" class="glightbox" data-gallery="g"><img src="photo2.jpg"></a>
+<a href="photo3.jpg" class="glightbox" data-gallery="g"><img src="photo3.jpg"></a>
+<a href="photo4.jpg" class="glightbox" data-gallery="g"><img src="photo4.jpg"></a>
 </div>
 </div>
 
@@ -242,7 +241,8 @@ box.innerHTML+=`
 document.getElementById("reviews").innerHTML="No reviews available";
 });
 
-<\/script><script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script><script>const lightbox=GLightbox({loop:true,touchNavigation:true});</script>
+</script>
 
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script><script>GLightbox({selector:".glightbox",loop:true,touchNavigation:true,keyboardNavigation:true});</script>
 </body>
 </html>
