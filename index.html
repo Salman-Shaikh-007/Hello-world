@@ -212,9 +212,11 @@ rows.reverse().slice(0,10).forEach(row=>{
 
 let cols=row.split(",");
 
-let name=cols[1];
-let feedback=cols[2];
-let rating=cols[3];
+let name=(cols[1]||"").trim();
+let feedback=(cols[2]||"").trim();
+let rating=(cols[3]||"").trim();
+
+if(name==="" || feedback==="") return;
 
 let stars="⭐".repeat(Number(rating)||5);
 
